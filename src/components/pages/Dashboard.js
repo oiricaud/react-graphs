@@ -12,7 +12,6 @@ class Dashboard extends Component {
         }
         return null;
     }
-
     renderPieChartElement() {
         if (this.props.pieChartState) {
             return <MyPieChart> </MyPieChart>

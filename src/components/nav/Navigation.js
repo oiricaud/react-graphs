@@ -96,28 +96,14 @@ export default function Navigation() {
         setState({ ...state, [name]: event.target.checked });
     };
 
-    let activePage = 'Home';
-
     function handleDrawerOpen() {
         setOpen(true);
     }
 
-    function homeClicked() {
-        activePage = 'Home';
-    }
-    function settingsClicked() {
-        activePage = 'Settings';
-    }
     function handleDrawerClose() {
         setOpen(false);
     }
 
-    function pieChartSelected(val) {
-        console.log('this.pieChartSeleced ' + val);
-    }
-    function barChartSelected() {
-        console.log('this.barChartSelected');
-    }
     return (
             <div className={classes.root}>
                 <CssBaseline/>
@@ -140,9 +126,9 @@ export default function Navigation() {
                     </div>
                     <Divider/>
 
-                    <NavLink className="nav-link" exact to='/home'  style={{ textDecoration: 'none' }}>
+                    <NavLink className="nav-link" exact to='/'  style={{ textDecoration: 'none' }}>
                         <List> {['Home'].map((text, index) => (
-                            <ListItem onClick={homeClicked()} button key={text}>
+                            <ListItem button key={text}>
                                 <ListItemIcon>{<HomeIcon/>}</ListItemIcon>
                                 <ListItemText primary={text}/>
                             </ListItem>
@@ -164,7 +150,7 @@ export default function Navigation() {
                 </Drawer>
                 <main className={clsx(classes.content, {[classes.contentShift]: open})}>
                     <div className={classes.drawerHeader}/>
-                    <Route exact path='/home' render={() =>
+                    <Route exact path='/' render={() =>
                         <Dashboard barChartState={state.barChart} pieChartState={state.pieChart}>  </Dashboard>} />
                     <Route exact path='/settings' render={() =>
                             <div>
