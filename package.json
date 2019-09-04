@@ -1,0 +1,30 @@
+{
+  "name": "kizen-react-code-challenge",
+  "version": "0.0.0",
+  "description": "Greenfield app development challenge",
+  "keywords": [
+    "react",
+    "redux"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "@material-ui/core": "^4.4.0",
+    "@material-ui/icons": "^4.2.1",
+    "clsx": "^1.0.4",
+    "material-ui": "^0.20.2",
+    "prop-types": "latest",
+    "react": "^16.9.0",
+    "react-dom": "16.9.0",
+    "react-router-dom": "^5.0.1",
+    "recharts": "^1.7.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
