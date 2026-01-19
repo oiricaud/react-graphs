@@ -19,7 +19,7 @@
     "recharts": "^1.7.1"
   },
   "devDependencies": {
-    "react-scripts": "1.0.0"
+    "react-scripts": "1.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
